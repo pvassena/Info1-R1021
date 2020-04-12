@@ -229,7 +229,7 @@ El segundo le muestra que existe un archivo llamado "log_clase_1.txt" que
 deberá enviar para la corrección del tp.
 ```bash
 $ exit
-$ ls -a | grep log_clase_1.txt
+$ ls -l | grep log_clase_1.txt
 ```
 
 Si decide que no quiere más el paquete `tree`,
