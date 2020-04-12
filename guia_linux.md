@@ -41,7 +41,7 @@ $ ls -al
 ```
 Ejecute los siguientes comandos. ¿Qué es lo que estamos haciendo?
 ```bash
-$ ls ~/
+$ ls ~
 $ ls /
 $ ls /home
 ```
@@ -54,7 +54,7 @@ $ man pwd
 ```
 Ejecute el siguiente comando. ¿En qué directorio estamos trabajando?
 ```bash
-$ man pwd
+$ pwd
 ```
 
 # cd:
