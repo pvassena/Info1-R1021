@@ -9,6 +9,8 @@
 
 Práctica básica de los comandos más comunes de GNU/linux en bash.
 
+Para abrir un terminal, utilice el atajo de teclado [Ctrl+Alt+t] o busque en los menús de su distribución.
+
 ## man:
 
 Ejecute el siguiente comando. ¿Por qué falló?
