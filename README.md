@@ -8,4 +8,4 @@ Material para las clases de Informática 1 del curso R1021
 | Ayudante: | Ing. Carlos Cuttita         |
 | Ayudante: | Pedro Vassena               |
 
-[Guía de Linux](https://pvassena.github.io/Info1-R1021/)
+[Guía de Linux](https://pvassena.github.io/Info1-R1021/guia_linux)
