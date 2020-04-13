@@ -7,3 +7,5 @@ Material para las clases de Informática 1 del curso R1021
 | JTP:      | Ing. Hector Levi            |
 | Ayudante: | Ing. Carlos Cuttita         |
 | Ayudante: | Pedro Vassena               |
+
+[Guía de Linux](https://pvassena.github.io/Info1-R1021/)
