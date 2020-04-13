@@ -1,5 +1,15 @@
+| Profesor: | Ing. Ignacio Javier Bonelli |
+|-----------|-----------------------------|
+| JTP:      | Ing. Hector Levi            |
+| Ayudante: | Ing. Carlos Cuttita         |
+| Ayudante: | Pedro Vassena               |
 
-# man:
+
+# Guía de Linux
+
+Práctica básica de los comandos más comunes de GNU/linux en bash.
+
+## man:
 
 Ejecute el siguiente comando. ¿Por qué falló?
 ```bash
@@ -16,7 +26,7 @@ $ man 1 printf
 $ man 3 printf
 ```
 
-# ls:
+## ls:
 
 Ejecute el siguiente comando y lea brevemente la descripción. ¿Qué hace `ls`?
 ```bash
@@ -46,7 +56,7 @@ $ ls /
 $ ls /home
 ```
 
-# pwd:
+## pwd:
 
 Ejecute el siguiente comando. ¿Qué hace `pwd`?
 ```bash
@@ -57,7 +67,7 @@ Ejecute el siguiente comando. ¿En qué directorio estamos trabajando?
 $ pwd
 ```
 
-# cd:
+## cd:
 
 Ejecute el siguiente comando. ¿Por qué falló?
 ```bash
@@ -104,7 +114,7 @@ interesa está muy bueno y es útil.
 
 `$ bash | tee log_clase_1.txt`
 
-# mkdir:
+## mkdir:
 
 Ejecute el siguiente comando. ¿Qué hace `mkdir`?
 ```bash
@@ -156,7 +166,7 @@ ejecutando este comando en su lugar cuando sea necesario.
 
 `$ find`
 
-# cp
+## cp
 
 Ejecute el siguiente comando. ¿Qué hace `cp`?
 ```bash
@@ -177,7 +187,7 @@ $ cp arch0.txt dir3/
 $ tree
 ```
 
-# mv
+## mv
 
 Ejecute el siguiente comando. ¿Qué hace `mv`?
 ```bash
@@ -193,7 +203,7 @@ $ mv dir0 dir4
 $ tree
 ```
 
-# rm
+## rm
 
 Ejecute el siguiente comando. ¿Qué hace `rm`?
 ```bash
@@ -216,7 +226,7 @@ $ rm -d dir3
 $ rm -r dir3
 $ tree
 ```
-# Finalización
+## Finalización
 
 Ejecute estos comandos para eliminar recursivamente todos los archivos creados,
 dejando su computadora como estaba al inicio de la práctica.
