@@ -1,0 +1,318 @@
+====== Informática 1 - R1021 ======
+
+|  Profesor: | Ing. Ignacio Javier Bonelli  |
+|------------|------------------------------|
+|  JTP:      | Ing. Hector Levi             |
+|  Ayudante: | Ing. Carlos Cuttita          |
+|  Ayudante: | Pedro Vassena                |
+
+
+===== Guía de Linux =====
+
+Práctica básica de los comandos más comunes de GNU/linux en bash.
+
+Para abrir un terminal, utilice el atajo de teclado [Ctrl+Alt+t] o busque en los menús de su distribución.
+
+==== man: ====
+
+Ejecute el siguiente comando. ¿Por qué falló?
+
+<code bash>
+$ man
+</code>
+
+Ejecute el siguiente comando y lea brevemente la descripción. ¿Qué hace //man//?
+
+<code bash>
+$ man man
+</code>
+
+Ejecute los siguientes comandos. ¿Son lo mismo? Como desarrolladores, ¿Cuál nos interesa más?
+
+<code bash>
+$ man printf
+$ man 1 printf
+$ man 3 printf
+</code>
+
+==== ls: ====
+
+Ejecute el siguiente comando y lea brevemente la descripción. ¿Qué hace //ls//?
+
+<code bash>
+$ man ls
+</code>
+
+Ejecute el siguiente comando y observe la salida. ¿Reconoce alguna carpeta?
+
+<code bash>
+$ ls
+</code>
+
+Ejecute el siguiente comando y observe la salida. ¿Qué son los archivos y carpetas con punto adelante?
+
+<code bash>
+$ ls -a
+</code>
+
+Ejecute el siguiente comando y observe la salida. ¿Qué representan las diversas columnas?
+
+<code bash>
+$ ls -l
+</code>
+
+Ejecute los siguientes comandos. ¿Son lo mismo?
+
+<code bash>
+$ ls -a -l
+$ ls -al
+</code>
+
+Ejecute los siguientes comandos. ¿Qué es lo que estamos haciendo?
+
+<code bash>
+$ ls ~
+$ ls /
+$ ls /home
+</code>
+
+==== pwd: ====
+
+Ejecute el siguiente comando. ¿Qué hace //pwd//?
+
+<code bash>
+$ man pwd
+</code>
+
+Ejecute el siguiente comando. ¿En qué directorio estamos trabajando?
+<code bash>
+$ pwd
+</code>
+
+==== cd: ====
+
+Ejecute el siguiente comando. ¿Por qué falló?
+
+<code bash>
+$ man cd
+</code>
+
+Ejecute el siguiente comando. ¿Qué hace //cd//? ¿Por qué no está en el manual (usar google)?
+
+<code bash>
+$ help cd
+</code>
+
+Ejecute los siguientes comandos. ¿Qué hizo //cd//? ¿Qué carpeta lista //ls// cuando no tiene parámetros?
+
+<code bash>
+$ ls
+$ cd /
+$ pwd
+$ ls
+</code>
+
+Ejecute los siguientes comandos. ¿Qué representan . y .. en linux?
+
+<code bash>
+$ cd /
+$ pwd
+$ ls
+$ cd /home
+$ pwd
+$ ls
+$ cd .
+$ pwd
+$ ls
+$ cd ..
+$ pwd
+$ ls
+</code>
+
+Ejecute los siguientes comandos. ¿Qué es ~ en linux? ¿A qué directorio cambia //cd// cuando no tiene parámetros?
+
+<code bash>
+$ cd ~
+$ pwd
+$ cd
+$ pwd
+</code>
+
+Ejecute el siguiente comando para iniciar una sesión de bash adentro de su sesión de bash,
+permitiendo guardar el flujo de salida en un archivo. //bash// es para ejecutar la shell, //|//
+es para redirigir la salida de un comando a la entrada de otro, y //tee// sirve para guardar
+una copia del flujo de salida en un archivo. No es necesario que lo aprendan ahora,
+ya lo van a ver en profundidad cuando vean Pipes, 
+pero si les interesa está muy bueno y es útil.
+
+<code bash>
+$ bash | tee log_clase_1.txt
+</code>
+
+==== mkdir: ====
+
+Ejecute el siguiente comando. ¿Qué hace //mkdir//?
+
+<code bash>
+$ man mkdir
+</code>
+
+Ejecute los siguientes comandos para crear una carpeta en la cual trabajar.
+
+<code bash>
+$ mkdir practicalinux
+$ cd practicalinux
+$ pwd
+</code>
+
+A partir de aquí asumimos que ya sabe como detectar en qué directorio están trabajando,
+utilizando pwd o observando el directorio en el prompt de su terminal,
+por lo que no lo volveremos a mencionar.
+
+Ejecute el siguiente comando y observe la salida.
+
+<code bash>
+$ mkdir dir0
+$ ls
+</code>
+
+Ejecute los siguientes comandos. ¿Por qué falló el primero? ¿Cómo lo solucionamos?
+
+<code bash>
+$ mkdir dir1/dir2
+$ mkdir -p dir1/dir2
+$ ls
+</code>
+
+Ejecute los siguientes comandos para crear un archivo con el que poder ejecutar los siguientes comandos.
+
+<code bash>
+$ ls >> arch0.txt
+$ ls
+</code>
+
+El comando de dirección de flujo //>>// redirige el flujo de salida y lo agrega al final de un archivo.
+Este tipos de comandos (de direccionamiento de flujo) son una herramienta muy poderosa
+que le da un gran poder a los usuarios avanzados de linux para diversas tareas cotidianas.
+Un ejemplo que puede servir para informática 1, es al hacer logging, emitir los logs por stderr
+y redirigir stderr a un archivo, utilizando el comando:
+
+<code bash>
+$ ./a.out 2>>log.txt
+</code>
+
+Ejecute (si quiere) el comando para instalar un paquete llamado //tree//,
+que permite mostrar de forma bonita carpetas y archivos de forma recursiva.
+
+<code bash>
+$ sudo apt install tree
+</code>
+
+En caso de no querer descargar el paquete, puede realizar una función similar
+ejecutando este comando en su lugar cuando sea necesario.
+
+<code bash>
+$ find
+</code>
+
+==== cp ====
+
+Ejecute el siguiente comando. ¿Qué hace //cp//?
+
+<code bash>
+$ man cp
+</code>
+
+Ejecute los siguientes comandos. ¿Por qué falló el primero? ¿Cómo lo solucionamos?
+Ejecutamos tanto //tree// como //find// para que los que instalaron //tree// puedan ver las diferencias entre ambos.
+
+<code bash>
+$ cp dir1/dir2 dir_3
+$ cp -r dir1/dir2 dir_3
+$ tree
+$ find
+</code>
+
+Ejecute los siguientes comandos. ¿Qué hizo el primero? ¿Qué hizo el segundo?
+
+<code bash>
+$ cp -r dir1/dir2 .
+$ cp arch0.txt dir3/
+$ tree
+</code>
+
+==== mv ====
+
+Ejecute el siguiente comando. ¿Qué hace //mv//?
+
+<code bash>
+$ man mv
+</code>
+
+Ejecute los siguientes comandos. ¿Qué hizo cada uno?
+
+<code bash>
+$ mv arch0.txt dir0/
+$ tree
+$ mv dir0/arch0.txt arch1.txt
+$ tree
+$ mv dir0 dir4
+$ tree
+</code>
+
+==== rm ====
+
+Ejecute el siguiente comando. ¿Qué hace //rm//?
+
+<code bash>
+$ man rm
+</code>
+
+Ejecute cuidadosamente (//rm// no perdona) los siguientes comandos y observe sus efectos.
+
+<code bash>
+$ rm arch1.txt
+$ tree
+</code>
+
+Ejecute cuidadosamente los siguientes comandos. ¿Por qué falló el primero? ¿Cómo lo solucionamos?
+
+<code bash>
+$ rm dir4
+$ rm -d dir4
+$ tree
+</code>
+
+Ejecute cuidadosamente los siguientes comandos. ¿Por qué falló el primero? ¿Por qué la solución es distinta?
+
+<code bash>
+$ rm -d dir3
+$ rm -r dir3
+$ tree
+</code>
+
+==== Finalización ====
+
+Ejecute estos comandos para eliminar recursivamente todos los archivos creados,
+dejando su computadora como estaba al inicio de la práctica.
+
+<code bash>
+$ cd ..
+$ rm -r practicalinux
+</code>
+
+Ejecute los siguientes comandos. El primero sale de la sesión de bash interna.
+El segundo le muestra que existe un archivo llamado "log_clase_1.txt" que
+deberá enviar para la corrección del tp.
+
+<code bash>
+$ exit
+$ ls -l | grep log_clase_1.txt
+</code>
+
+Si decide que no quiere más el paquete //tree//,
+ejecute el siguiente comando para eliminarlo.
+
+<code bash>
+$ sudo apt purge tree
+</code>
